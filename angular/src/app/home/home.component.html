@@ -1,0 +1,17 @@
+<div class="welcome">
+    <h1>
+        {{title}}
+    </h1>
+</div>
+
+<div class="container" fxLayout="row" fxLayoutGap="2%" fxLayoutAlign="center">
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Enter Post ID </mat-label>
+            <input type="number" name="id" [(ngModel)]="id" (ngModelChange)="modelChanged($event)" required matInput>
+        </mat-form-field>
+    </div>
+    <div>
+        <button class="send-button" mat-flat-button color="primary" (click)="sendID()" [disabled]="button">Send</button>
+    </div>
+</div>
